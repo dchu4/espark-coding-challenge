@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table-bordered table-striped">
+      <% @personalized_curriculums.each do |personalized_curriculum| %>
+        <tr>
+          <td><%= personalized_curriculum.name %>:</td>
+          <td><%= CSV.parse(personalized_curriculum.curriculum)[0] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
